@@ -1,27 +1,8 @@
-# EX01 Developing a Simple Webserver
-## Date:26.10.2024
+from http.server import HTTPServer,BaseHTTPRequestHandler
 
-## AIM:
-To develop a simple webserver to serve html pages and display the configuration details of laptop.
+content='''
 
-## DESIGN STEPS:
-### Step 1: 
-HTML content creation.
 
-### Step 2:
-Design of webserver workflow.
-
-### Step 3:
-Implementation using Python code.
-
-### Step 4:
-Serving the HTML pages.
-
-### Step 5:
-Testing the webserver.
-
-## PROGRAM:
-'''
 <HTML>
     <CENTER>
     <H1>LAPTOP CONFIGURATION</H1>
@@ -69,9 +50,16 @@ Testing the webserver.
 </HTML>
 '''
 
-## OUTPUT:
-![alt text](<Screenshot 2024-10-26 133339.png>)
-![alt text](<Screenshot 2024-10-26 133401.png>)
 
-## RESULT:
-The program for implementing simple webserver is executed successfully.
+class MyServer(BaseHTTPRequestHandler):
+    def do_GET(self):
+        print("Get request received...")
+        self.send_response(200) 
+        self.send_header("content-type", "text/html")       
+        self.end_headers()
+        self.wfile.write(content.encode())
+
+print("This is my webserver") 
+server_address =('',8000)
+httpd = HTTPServer(server_address,MyServer)
+httpd.serve_forever()
