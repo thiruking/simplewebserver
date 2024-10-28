@@ -21,8 +21,10 @@ Serving the HTML pages.
 Testing the webserver.
 
 ## PROGRAM:
+...
 
 <HTML>
+    
     <CENTER>
     <H1>LAPTOP CONFIGURATION</H1>
 </CENTER>
@@ -66,7 +68,10 @@ Testing the webserver.
 </CENTER>
     </BODY>
 </TABLE>
+
 </HTML>
+
+...
 
 
 ## OUTPUT:
