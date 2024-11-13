@@ -44,7 +44,7 @@ Serving the HTML pages.
 Testing the webserver.
 
 ## PROGRAM:
-...
+```
 <HTML>
     <CENTER>
     <H1>LAPTOP CONFIGURATION</H1>
@@ -90,7 +90,7 @@ Testing the webserver.
     </BODY>
 </TABLE>
 </HTML>
-...
+```
 
 ## OUTPUT:
 ![alt text](<Screenshot 2024-10-26 133339.png>)
